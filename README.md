@@ -1,7 +1,7 @@
 # ceilinator
 Simple python3 and OpenCV method for segmenting the ceiling inside a building
 
-<img src='https://user-images.githubusercontent.com/478212/41076750-c8cf6328-69d8-11e8-8f0a-fb52faa66767.png'>
+<img src='https://user-images.githubusercontent.com/478212/41077963-76234b1a-69df-11e8-8977-acc955a8c09f.gif'>
 
 A simple, moving fish-eye camera can quickly map an indoor space.  A common intermediate step is to segment the ceiling from other objects in natural video.  This repository offers a simple, fast solution to get started. 
 
