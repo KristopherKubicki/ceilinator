@@ -15,19 +15,6 @@ while(True):
     # resize the frame to a future magic number
     frame = cv2.resize(frame,(224,224))
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-
-    # find a region of interest to base the edge detection
-    roi = gray[100:100, 124:124]
-    v = np.mean(roi)
- 
-    # threshold the grayscale image off the region of interest 
-    ret, thresh = cv2.threshold(gray,v*.7,v*1.3,cv2.THRESH_BINARY_INV+cv2.THRESH_OTSU)
-    # the mask needs to be an extra pixel on each side
-    mask = np.zeros((226, 226), np.uint8)
-    # select the region that touches the point directly overhead
-    cv2.floodFill(thresh, mask, (112,112), 255)
-
-    # watershed
     ret, thresh = cv2.threshold(gray,0,254,cv2.THRESH_BINARY_INV+cv2.THRESH_OTSU)
     thresh = cv2.bitwise_not(thresh)
 
